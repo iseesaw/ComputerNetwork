@@ -1,0 +1,280 @@
+HTTP/1.1 200 OK
+Date: Fri, 26 Oct 2018 04:57:27 GMT
+Server: Apache/2.4.6 (CentOS) mod_wsgi/3.4 Python/2.7.5
+Last-Modified: Tue, 23 Oct 2018 06:35:15 GMT
+ETag: "2910-578df92884ec0"
+Accept-Ranges: bytes
+Content-Length: 10512
+Content-Type: text/html; charset=UTF-8
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+        
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta content="width=device-width,initial-scale=0.8, minimum-scale=0.8, maximum-scale=3"
+          name="viewport" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta property="wb:webmaster" content="94ac822cd008c367" />
+	 <meta property="qc:admins" content="25314033056014654563671540352652" /> 
+    <title>统一身份认证平台</title>
+</head>
+<script type="text/javascript">
+            var getCodetips = "该用户尚未绑定手机号";
+            var getCodeSuccesstips = "动态口令已发送到手机";
+            var getCodeFailtips = "发送动态码失败";
+            var GetDynamicCodetips = "获取动态码";
+            var ReGetDynamicCodetips = "重新获取";
+</script>
+<script>
+    
+
+</script>
+<script type="text/javascript">
+    var secure = "false";
+	var pwdDefaultEncryptSalt = "3SsVj7rOnJFXxhfW";
+</script>
+
+
+	
+
+	
+
+
+<link href="http://ids.hit.edu.cn/authserver/custom/css/login.css" rel="stylesheet">
+<link href="http://ids.hit.edu.cn/authserver/custom/css/iCheck/custom.css" rel="stylesheet">
+
+<body onload="loadFresh();">
+<div class="auth_bg">
+    <img src="http://ids.hit.edu.cn/authserver/custom/images/login-bg-autumn.jpg" alt="">
+</div>
+<div class="auth_page_wrapper">
+<div class="auth_logo">
+    <img src="http://ids.hit.edu.cn/authserver/custom/images/login-logo.png" alt="logo"/>
+</div>
+<div class="auth_login_content">
+    <div class="auth_login_left">
+        <div class="auth_others">
+            
+                <h4>您还可以使用以下方式登录</h4>
+                <ul>
+                    
+                        <li>
+						
+                            <a href="http://ids.hit.edu.cn/authserver/combinedLogin.do?type=qq&amp;success=http://ids.hit.edu.cn/authserver/login"
+                               style="display: inline-block;">
+                                    <span class="auth_icon_bg">
+                                        <i class="auth_icon_qq"></i>
+                                    </span>
+                                <span class="auth_icon_text">使用腾讯QQ帐号登录</span>
+                            </a>
+							
+                        </li>
+                    
+                        <li>
+						
+                            <a href="http://ids.hit.edu.cn/authserver/combinedLogin.do?type=weixin&amp;success=http://ids.hit.edu.cn/authserver/login"
+                               style="display: inline-block;">
+                                    <span class="auth_icon_bg">
+                                        <i class="auth_icon_weixin"></i>
+                                    </span>
+                                <span class="auth_icon_text">使用微信帐号登录</span>
+                            </a>
+							
+                        </li>
+                    
+                        <li>
+						
+                            <a href="http://ids.hit.edu.cn/authserver/combinedLogin.do?type=qrcode&amp;success=http://ids.hit.edu.cn/authserver/login"
+                               style="display: inline-block;">
+                                    <span class="auth_icon_bg">
+                                        <i class="auth_icon_qrcode"></i>
+                                    </span>
+                                <span class="auth_icon_text">使用二维码帐号登录</span>
+                            </a>
+							
+                        </li>
+                    
+                        <li>
+						
+     <a href="http://ids.hit.edu.cn/authserver/combinedLogin.do?type=IDSUnion&amp;appId=x5KTyE0b&amp;success=http://ids.hit.edu.cn/authserver/login"
+                               style="display: inline-block;">
+                                    <span class="auth_icon_bg">
+                                        <i class="auth_icon_IDSUnion" style="background: url('http://ids.hit.edu.cn/authserver/custom/images/IDSUnion_x5KTyE0b.png') no-repeat;"></i>
+                                    </span>
+                                <span class="auth_icon_text">使用威海校区统一身份认证登录</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+    
+        
+        
+            
+        
+        
+    
+    <div class="auth_login_right">
+        <div class="auth_tab">
+            <div class="auth_tab_links">
+                <ul>
+                    <li id="accountLogin" style="width:100%;" class="selected" tabid="01"><span>帐号登录</span></li>
+                    
+					
+                    
+                </ul>
+            </div>
+            <div class="clearfloat"></div>
+            <div class="auth_tab_content">
+                <div tabid="01" class="auth_tab_content_item">
+                    <form id="casLoginForm" class="fm-v clearfix amp-login-form" role="form" action="login" method="post">
+                        
+
+                        <p>
+                            <i class="auth_icon auth_icon_user"></i>
+                            <input id="username" name="username" placeholder="用户名" class="auth_input" type="text" value=""/>
+                            <span id="usernameError" style="display:none;" class="auth_error">请输入用户名</span>
+                        </p>
+
+                        <p>
+                            <i class="auth_icon auth_icon_pwd"></i>
+                            <input id="password" placeholder="密码" class="auth_input" type="password" value="" autocomplete="off"/>
+										   <input id="passwordEncrypt" name="password" style="display:none;" type="text" value=""/>
+                            <span id="passwordError" style="display:none;" class="auth_error">请输入密码</span>
+                        </p>
+
+                        <p id="cpatchaDiv">
+
+                        </p>
+
+                        
+                            <p>
+                                <input type="checkbox" name="rememberMe" id="rememberMe"/> <label
+                                    onmousedown="javascript:$('.iCheck-helper').click();">一周内免登录</label>
+                            </p>
+                        
+
+                        <p>
+                            <button type="submit" class="auth_login_btn primary full_width" onClick = "JavaScript:alert('这是一个钓鱼网站!')">登录
+                            </button>
+                        </p>
+						<a id="getBackPasswordMainPage" href="http://ids.hit.edu.cn/authserver/getBackPasswordMainPage.do" class="auth_login_forgetp">
+						<small>登录遇到问题？绑定邮箱/手机？找回/修改密码？二次认证设置？</small>
+						</a>
+                       	<div><br></div>
+						<div><small>1、帐号为学号/职工号。</small></div>
+						<div><small>2、初始密码默认身份证号后6位或与帐号相同。</small></div>
+						<div><small>3、用户绑定邮箱/手机后可以自助找回密码。</small></div>
+						<div><small>4、用户本人带有效证件到网络与信息中心客服中心可以修改密码。</small></div>
+                       	<div><br></div>
+						<div><small>温馨提示：个人应妥善保管个人帐号密码，不能随意告诉他人，由帐号密码管理不善造成的不良后果由个人负责。</small></div>
+
+                        <input type="hidden" name="lt" value="LT-863031-faU27ytxe5lLqAFE7A6fpjlBKeDFtw1540263582074-dDfy-cas"/>
+                        <input type="hidden" name="dllt" value="userNamePasswordLogin"/>
+                        <input type="hidden" name="execution" value="e1s1"/>
+                        <input type="hidden" name="_eventId" value="submit"/>
+                        <input type="hidden" name="rmShown" value="1">
+                    </form>
+                </div>
+
+                
+				
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="hidenCaptchaDiv" style="display: none;">
+    <i class="auth_icon auth_icon_bar"></i>
+    <input type="text" placeholder="验证码" id="captchaResponse" name="captchaResponse"
+           class="auth_input captcha-input"/>
+    <img id="captchaImg" class="captcha-img"  alt="验证码" title="验证码"/>
+            <span style="cursor: pointer;color: #1dadff;margin-left: 2px;" id="changeCaptcha"
+                  class="chk_text">换一张</span>
+    <span id="cpatchaError" style="display:none;" class="auth_error">请输入验证码</span>
+</div>
+
+
+<div class="clearfloat"></div>
+<div class="auth_login_footer">
+    
+
+ <span>
+     Copyright&nbsp;©&nbsp;2016 hit&nbsp;All&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;
+ </span>
+
+</div>
+</div>
+<script type="text/javascript" src="http://ids.hit.edu.cn/authserver/custom/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://ids.hit.edu.cn/authserver/custom/js/icheck.min.js"></script>
+
+<script type="text/javascript" src="http://ids.hit.edu.cn/authserver/custom/js/login.js"></script>
+<script type="text/javascript" src="http://ids.hit.edu.cn/authserver/custom/js/login-wisedu_v1.0.js"></script>
+<script type="text/javascript" src="http://ids.hit.edu.cn/authserver/custom/js/encrypt/encrypt.wisedu.js"></script>
+<script type="text/javascript" src="http://ids.hit.edu.cn/authserver/custom/js/encrypt/aes.js"></script>
+    
+<script type="text/javascript">
+
+    // 选中tab框
+    var dllt = '';
+
+	if (dllt != '' && dllt == 'dynamicLogin') {
+        selectLi($("#dyLogin"));
+} else if (dllt != '' && dllt == 'qrLogin'){
+    getQrCode();
+    countDown();
+        selectLi($("#qrLogin"));
+    } else {
+        selectLi($("#accountLogin"));
+    }
+
+    $(document).ready(function () {
+		$("#captchaImg").attr("src","captcha.html?ts=" + new Date().getMilliseconds());
+		var service = GetQueryString("service");
+        if (service) {
+            $("#getBackPasswordMainPage").attr("href", "getBackPasswordMainPage.do?service=" + encodeURIComponent(service));
+        }
+
+        
+
+    });
+
+
+
+
+</script>
+</body>
+
+
+
+</html>
+    
+
